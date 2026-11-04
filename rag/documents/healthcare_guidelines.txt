@@ -1,0 +1,191 @@
+HEALTHCARE NAVIGATION KNOWLEDGE BASE
+=====================================
+Rural Healthcare Access & Referral Coordination System
+Source: Ministry of Health & Family Welfare (MoHFW), Government of India
+Document Type: Healthcare Guidelines Summary
+
+SECTION 1: HEALTHCARE FACILITY TYPES IN INDIA
+===============================================
+
+Sub-Centre (SC):
+- Lowest level of contact between the health system and community
+- Provides basic maternal and child health, family planning, nutrition
+- Staffed by: ANM (Auxiliary Nurse Midwife) and Male Health Worker
+- Serves: 5,000 population (plains) / 3,000 (tribal/hilly areas)
+- Services: Immunization, ANC, delivery care, family planning, basic first aid
+
+Primary Health Centre (PHC):
+- First point of contact between community and medical officer
+- Provides curative, preventive, and promotive healthcare
+- Staffed by: Medical Officer, Health Inspector, ANM
+- Serves: 30,000 population (plains) / 20,000 (tribal areas)
+- Services: OPD, 6-bed inpatient, maternal health, child health, disease control
+- Free medicines: Available under National Free Medicines Initiative
+
+Community Health Centre (CHC):
+- Referral unit for Primary Health Centres
+- Provides specialist services
+- Staffed by: 4 specialists (surgeon, physician, gynecologist, pediatrician)
+- Serves: 1,20,000 population
+- Services: 30-bed hospital, surgery, obstetrics, radiology, laboratory
+- IPHS (Indian Public Health Standards) norms apply
+
+Sub-District/Taluk Hospital:
+- Serves as referral for CHCs
+- 100-200 beds
+- Specialist services, emergency care
+
+District Hospital:
+- Apex referral facility in a district
+- 200-500 beds or more
+- Full specialist services, ICU, blood bank, dialysis
+
+Medical College & Teaching Hospitals:
+- Tertiary care
+- Full super-specialist services
+- Trauma centers, transplant units
+
+SECTION 2: EMERGENCY CONTACT NUMBERS (INDIA)
+=============================================
+
+108 - Emergency Response Service (ERS): Ambulance, Fire, Police integrated
+102 - National Ambulance Service (NAS): Free ambulance for pregnant women and sick children
+104 - Health Helpline: Free telemedicine consultations, 24x7
+1800-180-1104 - Toll-free ASHA helpline
+1097 - HIV/AIDS Helpline
+1800-11-4477 - Tobacco Quitline
+1800-11-4566 - NPCDCS (Non-Communicable Disease helpline)
+1800-233-1177 - Swachh Bharat Helpline
+
+Mental Health Crisis:
+iCall: 9152987821 (Mon-Sat, 8am-10pm)
+Vandrevala Foundation: 1860-2662-345 (24x7)
+NIMHANS: 080-46110007
+KIRAN: 1800-599-0019 (24x7 mental health helpline, toll-free)
+
+Women Helpline: 1091 / 181
+
+SECTION 3: GOVERNMENT HEALTH SCHEMES
+======================================
+
+Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY):
+- India's largest government-funded health insurance scheme
+- Coverage: Up to Rs 5 lakh per family per year for secondary and tertiary hospitalization
+- Beneficiaries: Bottom 40% of India's population (~10.74 crore families)
+- Eligibility: Based on SECC 2011 database (Socio-Economic Caste Census)
+- Services: 1,961 treatment packages covering surgery, medical, and day care
+- Cashless: Yes, at empanelled hospitals (both government and private)
+- Portability: Valid across India
+- How to check: Call 14555 or visit pmjay.gov.in
+
+National Health Mission (NHM):
+- Free OPD consultations at government facilities
+- Free essential medicines (NLEM - National List of Essential Medicines)
+- Free diagnostics under National Free Diagnostics Service Initiative
+- Free ambulance services (108/102)
+- Free maternal care: ANC, delivery, postnatal care
+- Free child health services: Immunization, RBSK, nutrition
+
+Pradhan Mantri Suraksha Bima Yojana (PMSBY):
+- Accident insurance: Rs 2 lakh coverage
+- Premium: Rs 20/year
+- Age: 18-70 years
+
+Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY):
+- Life insurance: Rs 2 lakh
+- Premium: Rs 436/year
+
+State-Specific Schemes (Maharashtra examples):
+- Mahatma Jyotirao Phule Jan Arogya Yojana (MJPJAY)
+- Coverage: Rs 1.5 lakh for non-PMJAY families
+- Combined with PMJAY for eligible families
+
+SECTION 4: DOCUMENTS REQUIRED FOR HEALTHCARE ACCESS
+=====================================================
+
+For Government Hospital/PHC/CHC:
+- Aadhaar Card (proof of identity and address)
+- Ration Card (for BPL/APL classification)
+- Ayushman Bharat Golden Card / PMJAY Card
+- State Health Card (if applicable)
+- Voter ID (alternative identity proof)
+- Previous medical records, prescriptions, test reports
+
+For Emergency Care:
+- No documents required for emergency treatment at government hospitals
+- Emergency stabilization is provided regardless of documents (as per law)
+
+SECTION 5: ASHA WORKERS AND COMMUNITY HEALTH SUPPORT
+======================================================
+
+ASHA (Accredited Social Health Activist):
+- Village-level health worker
+- One ASHA per 1,000 population
+- Roles: Health promotion, escort patients to facility, maternal health support
+- Can help with: PMJAY card verification, facility referrals, transport arrangement
+- Provides: Information about government schemes, free medicines, immunization
+
+How to contact ASHA:
+- Available in every village
+- Contact through ANM or PHC
+- Contact through Panchayat office
+
+ANM (Auxiliary Nurse Midwife):
+- Subcenter level health worker
+- Maternal & child health services
+- Immunization, ANC, family planning
+- First point of referral for complex cases
+
+SECTION 6: TELEMEDICINE GUIDELINES
+====================================
+
+Telemedicine Practice Guidelines (India, 2020):
+- Legal framework: Telemedicine Practice Guidelines under IMC Act, 1956
+- Permitted: Video, audio, and text consultations
+- OPD consultations: Can be done via telemedicine
+- Prescriptions: Can be issued via telemedicine (Schedule H1 drugs excluded)
+
+National Teleconsultation Service (eSanjeevani):
+- Free teleconsultation service
+- esanjeevaniopd.in or eSanjeevani app
+- Connects patients with government doctors
+- Available in all states
+
+SECTION 7: PATIENT RIGHTS IN INDIA
+====================================
+
+Right to Emergency Care:
+- All hospitals (government and private) must provide emergency treatment
+- Cannot be denied based on inability to pay
+- Clinical Establishments Act 2010
+
+Right to Information:
+- Right to know diagnosis, treatment options, risks, costs
+- Informed consent required before major procedures
+
+Right to Privacy:
+- Medical records are confidential
+- Patient data protected under IT Act
+
+SECTION 8: RURAL HEALTHCARE CHALLENGES
+========================================
+
+Key Challenges Identified:
+1. Distance: Average distance to PHC in rural areas: 4-8 km
+2. Transport: Limited public transport, high cost of private vehicles
+3. Awareness: Low awareness of available government services
+4. Specialists: Only 1 specialist per 100,000 population in rural India
+5. Medicine availability: Stock-outs at PHC/CHC level
+6. Diagnostic services: Limited lab facilities at peripheral level
+7. Language: Communication barriers in tribal areas
+8. Financial: Out-of-pocket expenditure still high despite schemes
+9. Time loss: Long waiting times at district hospitals
+10. Fragmented referral: Poor coordination between PHC/CHC/District Hospital
+
+Solutions Being Implemented:
+- Digital health records (ABHA - Ayushman Bharat Health Account)
+- Telemedicine expansion (eSanjeevani)
+- Mobile health units
+- ASHA incentive programs
+- Free diagnostics and medicines
+- Emergency transport (108 free ambulance)

@@ -1,0 +1,28 @@
+# Streamlit Configuration
+# ========================
+# Purpose: Configure Streamlit server settings for production deployment.
+
+[theme]
+primaryColor = "#1a7f4b"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#1f2328"
+font = "sans serif"
+
+[server]
+headless = true
+port = 8501
+address = "0.0.0.0"
+maxUploadSize = 10
+enableCORS = false
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = false
+toolbarMode = "minimal"
+
+[runner]
+fastReruns = true

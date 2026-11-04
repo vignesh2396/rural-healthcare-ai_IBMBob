@@ -1,0 +1,59 @@
+# Rural Healthcare AI Navigation System — Requirements
+# ======================================================
+# Python >= 3.10 required
+# Install: pip install -r requirements.txt
+# ======================================================
+
+# ── Core UI Framework ─────────────────────────────────
+streamlit>=1.32.0
+
+# ── LangChain AI Framework ────────────────────────────
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+
+# ── LLM Providers (install at least ONE) ──────────────
+# Option 1: Google Gemini (recommended — free tier available)
+# Get key at: https://ai.google.dev
+langchain-google-genai>=1.0.0
+google-generativeai>=0.5.0
+
+# Option 2: OpenAI (optional fallback)
+langchain-openai>=0.1.0
+
+# Option 3: Groq (free tier fallback)
+langchain-groq>=0.1.0
+
+# ── RAG & Vector Store ────────────────────────────────
+scikit-learn>=1.3.0
+chromadb>=0.5.0
+pypdf>=4.0.0
+
+# ── Database ──────────────────────────────────────────
+sqlalchemy>=2.0.0
+
+# ── Data Processing ───────────────────────────────────
+pandas>=2.0.0
+numpy>=1.26.0
+
+# ── Environment & Configuration ───────────────────────
+python-dotenv>=1.0.0
+
+# ── HTTP Clients ──────────────────────────────────────
+requests>=2.31.0
+httpx>=0.27.0
+
+# ── Data Validation ───────────────────────────────────
+pydantic>=2.0.0
+
+# ── Utilities ─────────────────────────────────────────
+python-dateutil>=2.9.0
+
+# ── Testing ───────────────────────────────────────────
+pytest>=7.0.0
+
+# ── Video Generation (generate_video.py) ──────────────
+moviepy>=1.0.3
+Pillow>=10.0.0
+imageio>=2.28.0
+imageio-ffmpeg>=0.4.9

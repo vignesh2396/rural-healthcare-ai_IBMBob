@@ -1,0 +1,43 @@
+# Docker Compose — Rural Healthcare AI Navigation System
+# ========================================================
+# For local development and testing
+# Usage: docker-compose up
+
+version: '3.8'
+
+services:
+  healthcare-ai:
+    build: .
+    container_name: rural-healthcare-ai
+    ports:
+      - "8501:8501"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - LLM_PROVIDER=${LLM_PROVIDER:-google}
+      - LLM_MODEL=${LLM_MODEL:-gemini-1.5-flash}
+      - APP_ENV=${APP_ENV:-development}
+      - DATABASE_URL=sqlite:///./data/healthcare.db
+      - CHROMA_PERSIST_DIR=./rag/chroma_db
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    volumes:
+      # Persist database and vector store between restarts
+      - healthcare-data:/app/data
+      - chroma-data:/app/rag/chroma_db
+      - log-data:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  healthcare-data:
+    driver: local
+  chroma-data:
+    driver: local
+  log-data:
+    driver: local
