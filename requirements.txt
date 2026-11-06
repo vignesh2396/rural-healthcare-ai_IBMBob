@@ -49,6 +49,12 @@ pydantic>=2.0.0
 # ── Utilities ─────────────────────────────────────────
 python-dateutil>=2.9.0
 
+
+# ── Guardrails & Performance Dashboard ───────────────────────────────────────
+# utils/guardrails.py  — uses Python stdlib only (re, time, hashlib, dataclasses)
+# utils/performance_dashboard.py — requires streamlit (already listed above)
+
+
 # ── Testing ───────────────────────────────────────────
 pytest>=7.0.0
 

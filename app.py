@@ -38,6 +38,15 @@ from pathlib import Path
 import streamlit as st
 from streamlit.components.v1 import html as st_html
 
+# ─── Guardrails & Performance Dashboard ──────────────────────────────────────
+from utils.guardrails import (
+    run_all_input_guardrails,
+    run_all_output_guardrails,
+    get_operational_stats,
+    record_token_usage,
+)
+from utils.performance_dashboard import render_performance_dashboard
+
 # Ensure project root is in path
 ROOT_DIR = Path(__file__).parent
 sys.path.insert(0, str(ROOT_DIR))
@@ -746,8 +755,9 @@ LLM_MODEL=gemini-1.5-flash
     render_disclaimer()
 
     # ── Main Content Tabs ────────────────────────────────────────────────
-    tab_chat, tab_facilities, tab_referral, tab_info = st.tabs([
-        "💬 Navigation Chat", "🏥 Facilities", "📄 Referral", "ℹ️ About"
+    tab_chat, tab_facilities, tab_referral, tab_info, tab_dashboard = st.tabs([
+        "💬 Navigation Chat", "🏥 Facilities", "📄 Referral", "ℹ️ About",
+        "📊 Performance Dashboard",
     ])
 
     with tab_chat:
@@ -761,6 +771,9 @@ LLM_MODEL=gemini-1.5-flash
 
     with tab_info:
         _render_info_tab()
+
+    with tab_dashboard:
+        render_performance_dashboard(st.session_state.get("session_metrics", {}))
 
 
 def _render_chat_tab():
@@ -823,13 +836,30 @@ def _handle_chat_input(user_message: str):
     if not supervisor:
         return
 
+    # ── Input Guardrails ────────────────────────────────────────────────
+    guard_result = run_all_input_guardrails(user_message, session_id=st.session_state.get("session_id", ""))
+    if guard_result.blocked:
+        violation_msg = (
+            "⚠️ **Input Validation Failed**\n\n"
+            f"Your message was blocked by safety guardrails: `{', '.join(guard_result.violations)}`\n\n"
+            "Please rephrase your question or contact support if you believe this is an error.\n\n"
+            "For immediate medical help: Call **104** (Health Helpline) or **108** (Ambulance)."
+        )
+        st.session_state.messages.append(("user", user_message, {}))
+        st.session_state.messages.append(("assistant", violation_msg, {"guardrail_blocked": True}))
+        return
+
+    # Use sanitized text (PII masked)
+    safe_message = guard_result.sanitized_text or user_message
+
     # Add user message to chat
     st.session_state.messages.append(("user", user_message, {}))
 
     # Process through supervisor
+    start_time = time.time()
     with st.spinner("🤖 Processing your request..."):
         try:
-            result = supervisor.process_message(user_message)
+            result = supervisor.process_message(safe_message)
         except Exception as e:
             result = {
                 "response_text": (
@@ -840,6 +870,29 @@ def _handle_chat_input(user_message: str):
                 "agent": "SupervisorAgent",
                 "emergency": False,
             }
+
+    latency_ms = (time.time() - start_time) * 1000
+
+    # ── Output Guardrails ───────────────────────────────────────────────
+    response_text = result.get("response_text", "")
+    out_guard = run_all_output_guardrails(response_text)
+    if out_guard.blocked:
+        response_text = (
+            "⚠️ The AI response was filtered by safety guardrails. "
+            "Please consult a healthcare professional directly.\n\n"
+            "For immediate help: Call **104** (Health Helpline) or **108** (Ambulance)."
+        )
+    else:
+        response_text = out_guard.sanitized_text or response_text
+    result["response_text"] = response_text
+
+    # ── Record metrics ──────────────────────────────────────────────────
+    input_tokens = len(safe_message.split()) * 2
+    output_tokens = len(response_text.split()) * 2
+    record_token_usage(input_tokens, output_tokens, cost_usd=output_tokens * 0.000002)
+    if "session_metrics" not in st.session_state:
+        st.session_state["session_metrics"] = {}
+    st.session_state["session_metrics"]["avg_latency_ms"] = latency_ms
 
     # Update session state
     st.session_state.emergency_active = result.get("emergency", False)
